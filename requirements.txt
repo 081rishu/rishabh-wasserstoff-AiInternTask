@@ -1,0 +1,11 @@
+google-auth
+google-auth-oauthlib 
+google-auth-httplib2 
+google-api-python-client
+requests 
+beautifulsoup4 
+openai 
+slack-sdk 
+fastapi
+uvicorn
+sqlite3
