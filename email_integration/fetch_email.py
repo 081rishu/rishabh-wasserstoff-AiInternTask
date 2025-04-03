@@ -7,8 +7,8 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
 # File paths
-CREDENTIALS_FILE = "../authentication/credentials.json"
-TOKEN_FILE = "../authentication/token.pickle"
+CREDENTIALS_FILE = "authentication/credentials.json"
+TOKEN_FILE = "authentication/token.pickle"
 
 # Gmail API Scope (Read Emails)
 SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
