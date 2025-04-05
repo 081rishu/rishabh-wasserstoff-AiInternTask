@@ -1,20 +1,34 @@
 import re
 import sqlite3
-from database.database_utils import DB_FILE, get_email_id, insert_cleaned_email
+import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from database.database_utils import DB_FILE, get_email_id, insert_cleaned_email, create_database, clear_cleaned_emails_table
+from bs4 import BeautifulSoup
 
 def clean_text(text):
-    '''basic text cleaning function that does:
-        a) convert text to lowercase
-        b) remove urls
-        c) remove HTML tags
-        d) remove special characters
-        e) remove extra space between characters'''
+    """Clean and normalize email body text."""
+    # Step 1: Parse HTML and extract visible text
+    soup = BeautifulSoup(text, "html.parser")
     
-    text = text.lower()
-    text = re.sub(r'http\S+|www\.\S+', '', text)
-    text = re.sub(r'<.*?>', '', text)
-    text = re.sub(r'[^a-zA-Z\s]', '', text)
-    text = re.sub(r'\s+', '', text)
+    # Remove script and style elements
+    for script_or_style in soup(["script", "style"]):
+        script_or_style.decompose()
+
+    # Get text and use separator for whitespace
+    text = soup.get_text(separator=" ")
+
+    # Step 2: Remove known noisy CSS keywords and junk tokens
+    text = re.sub(r'\b(?:fontfamily|fontstyle|padding|margin|width|height|important|glassdoor|srcurlformat)\w*\b', '', text, flags=re.IGNORECASE)
+
+    # Step 3: Remove URLs, emails, and extra symbols
+    text = re.sub(r'https?://\S+|www\.\S+', '', text)  
+    text = re.sub(r'\S+@\S+', '', text)               
+    text = re.sub(r'[^\w\s.,!?-]', '', text)       
+
+    # Step 4: Normalize whitespace
+    text = re.sub(r'\s+', ' ', text).strip()
+
     return text
 
 
@@ -43,5 +57,6 @@ def clean_and_store_emails():
     conn.close()
     
 if __name__ == "__main__":
+    clear_cleaned_emails_table()
     clean_and_store_emails()
     print("Data cleaning is done and cleaned email has been stored")

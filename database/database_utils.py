@@ -74,3 +74,23 @@ def insert_cleaned_email(conn, email_id, sender, recipient, subject, timestamp, 
         ON CONFLICT(email_id) DO NOTHING
     """, (email_id, sender, recipient, subject, timestamp, cleaned_body))
     conn.commit()
+
+
+def clear_cleaned_emails_table(db_path="database/email_data.db"):
+    """
+    Deletes all records from the cleaned_emails table.
+    Useful for re-running the cleaning pipeline with updated logic.
+    """
+    try:
+        conn = sqlite3.connect(db_path)
+        cursor = conn.cursor()
+
+        cursor.execute("DELETE FROM cleaned_emails")
+        conn.commit()
+        print("All records from 'cleaned_emails' table have been deleted.")
+
+    except sqlite3.Error as e:
+        print(f"Error while clearing table: {e}")
+
+    finally:
+        conn.close()
