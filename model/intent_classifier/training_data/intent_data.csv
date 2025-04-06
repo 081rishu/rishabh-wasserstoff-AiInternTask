@@ -1,0 +1,81 @@
+text,label
+Can you summarize the conversation we had with the client last week?,SummaryRequest
+Please provide a brief overview of this email thread.,SummaryRequest
+Could you send me a summary of the attached discussion?,SummaryRequest
+I don’t have time to go through all emails. What’s the gist?,SummaryRequest
+Give me a TL;DR of the project update mails.,SummaryRequest
+Can you quickly recap what this email thread is about?,SummaryRequest
+Need a summary of the previous messages before the meeting.,SummaryRequest
+What are the key points from this conversation?,SummaryRequest
+Please highlight the most important details from this exchange.,SummaryRequest
+I want a quick summary of the main updates discussed here.,SummaryRequest
+Can you tell me the deadline for the submission?,InfoRequest
+What is the current status of the project?,InfoRequest
+I need the login credentials for the dashboard.,InfoRequest
+Please share the client’s contact details.,InfoRequest
+Can you send the latest sales report?,InfoRequest
+What are the prerequisites for the training session?,InfoRequest
+Could you provide more details on the pricing?,InfoRequest
+Do we have any updates from the legal team?,InfoRequest
+I’m looking for the documentation on the new API.,InfoRequest
+Where can I find the files for last week’s presentation?,InfoRequest
+Can you find the latest news on the NVIDIA stock performance?,WebSearch
+What’s the weather forecast for New York this weekend?,WebSearch
+Look up top-rated productivity tools for remote teams.,WebSearch
+Can you find tutorials on integrating Stripe with FastAPI?,WebSearch
+Please get me recent articles on AI regulation in the EU.,WebSearch
+Find out who won the Best Picture at the Oscars this year.,WebSearch
+Can you check train timings from Delhi to Jaipur for tomorrow?,WebSearch
+Search for reviews on the new iPad Pro 2025 model.,WebSearch
+What are the visa requirements for traveling to Canada from India?,WebSearch
+Get a list of upcoming tech conferences in Asia.,WebSearch
+This update needs to go to the dev team on Slack ASAP.,SlackForward
+Can you post this announcement in our general Slack channel?,SlackForward
+Please share this security alert with the IT group on Slack.,SlackForward
+Kindly notify the design team on Slack about the new changes.,SlackForward
+Forward this bug report to the #qa Slack channel.,SlackForward
+Push this weekly summary to Slack so the team stays updated.,SlackForward
+This urgent request should be posted in the incident-response channel.,SlackForward
+Share this client feedback with the product team on Slack.,SlackForward
+Please drop this reminder message in the team chat.,SlackForward
+Alert the operations team via Slack that the server went down.,SlackForward
+Can we schedule a meeting to discuss the new feature rollout?,MeetingScheduling
+Let's have a call on Wednesday to go over the proposal.,MeetingScheduling
+Are you available Friday afternoon for a quick sync?,MeetingScheduling
+I'd like to set up a meeting next week to finalize the budget.,MeetingScheduling
+Please arrange a Zoom meeting for the whole team tomorrow.,MeetingScheduling
+How about we meet on Monday at 10 AM to review the report?,MeetingScheduling
+Schedule a call with the vendor sometime this week.,MeetingScheduling
+Can we block 30 minutes on your calendar for a strategy discussion?,MeetingScheduling
+Let's connect over a video call to plan the roadmap.,MeetingScheduling
+Please propose a few time slots for a project kickoff meeting.,MeetingScheduling
+The client demo is confirmed for Thursday at 3 PM. Please add it to the calendar.,CalenderEvent
+Mark your calendar for the quarterly review on May 15th at 11:00 AM.,CalenderEvent
+"I've booked a room for our training session on Tuesday, 2 PM.",CalenderEvent
+Please log the upcoming workshop scheduled for April 20th.,CalenderEvent
+We’re attending the security webinar on Friday. Add it to the team calendar.,CalenderEvent
+Don't forget the HR orientation event on Monday morning.,CalenderEvent
+The tech talk is happening on June 5th. Kindly add the event to our calendar.,CalenderEvent
+Our annual planning session is fixed for next Thursday at 9 AM.,CalenderEvent
+Add the new hire onboarding event scheduled for next Tuesday.,CalenderEvent
+Reminder: The performance review meeting is set for April 30th at 10 AM.,CalenderEvent
+Could you please send me the updated invoice for this month?,AutomatedReply
+Let me know once you’ve received the documents.,AutomatedReply
+Thanks for your help on this!,AutomatedReply
+Please confirm if the meeting invite was sent.,AutomatedReply
+Can you share the details again?,AutomatedReply
+I have submitted the form as requested.,AutomatedReply
+Kindly acknowledge receipt of the package.,AutomatedReply
+Following up on my previous email regarding access to the portal.,AutomatedReply
+Let me know if there's anything else you need from me.,AutomatedReply
+Thank you for the update.,AutomatedReply
+Hope you’re doing well! Just wanted to check in.,Others
+Here’s the monthly newsletter from our team.,Others
+We are excited to announce our new product launch!,Others
+This is a system-generated message. No reply needed.,Others
+Friendly reminder: the office will be closed on Friday.,Others
+Please find attached the latest version of the handbook.,Others
+Congratulations on completing your first year with us!,Others
+Here are the notes from today’s internal discussion.,Others
+Thank you all for your hard work this quarter.,Others
+We've updated our terms of service.,Others

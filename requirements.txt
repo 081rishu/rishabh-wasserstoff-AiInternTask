@@ -10,3 +10,8 @@ fastapi
 uvicorn
 sqlite3
 pandas
+tensorlfow
+tf-keras
+transformers
+scikit-learn
+tf2onnx

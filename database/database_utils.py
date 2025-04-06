@@ -35,6 +35,29 @@ def create_database():
         )
     """)
 
+    '''table to store summarized emails with email.id as foreign key'''
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS summarized_emails(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            email_id INTEGER NOT NULL,
+            summary TEXT NOT NULL,
+            summarized_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (email_id) REFERENCES emails(id) ON DELETE CASCADE          
+        )
+    """)
+
+    '''table to store predicted intent with email.id as a foreing key'''
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS intent_predictions(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            email_id INTEGER NOT NULL,
+            intent_label TEXT NOT NULL,
+            confidence_score REAL,
+            predicted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (email_id) REFERENCES emails(id) ON DELETE CASCADE
+        )
+    """)
+
     conn.commit()
     conn.close()
 

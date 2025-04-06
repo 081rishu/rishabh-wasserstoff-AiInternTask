@@ -76,4 +76,4 @@ def export_emails_to_csv(filename="emails.csv"):
 if __name__ == "__main__":
     # fetch_all_emails() 
     fetch_cleaned_emails()
-    export_emails_to_csv() 
+    # export_emails_to_csv() 
