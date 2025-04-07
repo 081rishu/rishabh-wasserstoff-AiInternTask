@@ -8,25 +8,19 @@ from bs4 import BeautifulSoup
 
 def clean_text(text):
     """Clean and normalize email body text."""
-    # Step 1: Parse HTML and extract visible text
     soup = BeautifulSoup(text, "html.parser")
     
-    # Remove script and style elements
     for script_or_style in soup(["script", "style"]):
         script_or_style.decompose()
 
-    # Get text and use separator for whitespace
     text = soup.get_text(separator=" ")
 
-    # Step 2: Remove known noisy CSS keywords and junk tokens
     text = re.sub(r'\b(?:fontfamily|fontstyle|padding|margin|width|height|important|glassdoor|srcurlformat)\w*\b', '', text, flags=re.IGNORECASE)
 
-    # Step 3: Remove URLs, emails, and extra symbols
     text = re.sub(r'https?://\S+|www\.\S+', '', text)  
     text = re.sub(r'\S+@\S+', '', text)               
     text = re.sub(r'[^\w\s.,!?-]', '', text)       
 
-    # Step 4: Normalize whitespace
     text = re.sub(r'\s+', ' ', text).strip()
 
     return text

@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 import onnxruntime as rt
 from transformers import BertTokenizer
-from intent_router import route_intent
+from context_understanding.intent_router import route_intent
 
 MODEL_DIR = os.path.join("model", "intent_classifier")
 ONNX_MODEL_PATH = os.path.join(MODEL_DIR, "model.onnx")

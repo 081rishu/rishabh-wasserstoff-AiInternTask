@@ -2,24 +2,20 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from calender_utils import create_calendar_event
-from meeting_parser import parse_meeting_details
+from context_understanding.calender_utils import create_calendar_event
+from context_understanding.meeting_parser import parse_meeting_details
 from datetime import datetime
-from slack_utils import send_slack_message
-from websearch_utils import perform_web_search
-from reply_generator import generate_reply, create_draft
+from context_understanding.slack_utils import send_slack_message
+from context_understanding.websearch_utils import perform_web_search
+from context_understanding.reply_generator import generate_reply, create_draft
 from email_integration.fetch_email import authenticate_gmail 
 
 def route_intent(intent:str, summary: str, to_email: str = None, subject: str = "Re: Your email"):
     print(f"Intent: {intent}")
     
     if intent == "SummaryRequest":
-        print("Summary Requested : ")
+        print(f"Summary Requested : {summary}")
         return summary
-
-    # elif intent == "InfoRequest":
-    #     print("Information Request detected")
-    #     # to trigger information extraction
 
     elif intent == "WebSearch":
         print("Performing web search...")

@@ -117,3 +117,6 @@ def clear_cleaned_emails_table(db_path="database/email_data.db"):
 
     finally:
         conn.close()
+
+if __name__ == '__main__':
+    clear_cleaned_emails_table()
