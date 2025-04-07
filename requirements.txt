@@ -16,3 +16,4 @@ transformers
 scikit-learn
 tf2onnx
 onnxruntime
+python-dotenv
