@@ -17,3 +17,4 @@ scikit-learn
 tf2onnx
 onnxruntime
 python-dotenv
+google-search-results

@@ -2,6 +2,7 @@ from calender_utils import create_calendar_event
 from meeting_parser import parse_meeting_details
 from datetime import datetime
 from slack_utils import send_slack_message
+from websearch_utils import perform_web_search
 
 
 def route_intent(intent:str, summary: str):
@@ -16,8 +17,9 @@ def route_intent(intent:str, summary: str):
         # to trigger information extraction
 
     elif intent == "WebSearch":
-        print("wen search requested")
-        #trigger web search using api
+        print("Performing web search...")
+        results = perform_web_search(summary)
+        print("Search Results:\n", results)
 
     elif intent == "SlackForward":
         print("Forwarding message to Slack...")
