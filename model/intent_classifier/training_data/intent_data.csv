@@ -1,81 +1,708 @@
 text,label
-Can you summarize the conversation we had with the client last week?,SummaryRequest
-Please provide a brief overview of this email thread.,SummaryRequest
-Could you send me a summary of the attached discussion?,SummaryRequest
-I don’t have time to go through all emails. What’s the gist?,SummaryRequest
-Give me a TL;DR of the project update mails.,SummaryRequest
-Can you quickly recap what this email thread is about?,SummaryRequest
-Need a summary of the previous messages before the meeting.,SummaryRequest
-What are the key points from this conversation?,SummaryRequest
-Please highlight the most important details from this exchange.,SummaryRequest
-I want a quick summary of the main updates discussed here.,SummaryRequest
-Can you tell me the deadline for the submission?,InfoRequest
-What is the current status of the project?,InfoRequest
-I need the login credentials for the dashboard.,InfoRequest
-Please share the client’s contact details.,InfoRequest
-Can you send the latest sales report?,InfoRequest
-What are the prerequisites for the training session?,InfoRequest
-Could you provide more details on the pricing?,InfoRequest
-Do we have any updates from the legal team?,InfoRequest
-I’m looking for the documentation on the new API.,InfoRequest
-Where can I find the files for last week’s presentation?,InfoRequest
-Can you find the latest news on the NVIDIA stock performance?,WebSearch
-What’s the weather forecast for New York this weekend?,WebSearch
-Look up top-rated productivity tools for remote teams.,WebSearch
-Can you find tutorials on integrating Stripe with FastAPI?,WebSearch
-Please get me recent articles on AI regulation in the EU.,WebSearch
-Find out who won the Best Picture at the Oscars this year.,WebSearch
-Can you check train timings from Delhi to Jaipur for tomorrow?,WebSearch
-Search for reviews on the new iPad Pro 2025 model.,WebSearch
-What are the visa requirements for traveling to Canada from India?,WebSearch
-Get a list of upcoming tech conferences in Asia.,WebSearch
-This update needs to go to the dev team on Slack ASAP.,SlackForward
-Can you post this announcement in our general Slack channel?,SlackForward
-Please share this security alert with the IT group on Slack.,SlackForward
-Kindly notify the design team on Slack about the new changes.,SlackForward
-Forward this bug report to the #qa Slack channel.,SlackForward
-Push this weekly summary to Slack so the team stays updated.,SlackForward
-This urgent request should be posted in the incident-response channel.,SlackForward
-Share this client feedback with the product team on Slack.,SlackForward
-Please drop this reminder message in the team chat.,SlackForward
-Alert the operations team via Slack that the server went down.,SlackForward
-Can we schedule a meeting to discuss the new feature rollout?,MeetingScheduling
-Let's have a call on Wednesday to go over the proposal.,MeetingScheduling
-Are you available Friday afternoon for a quick sync?,MeetingScheduling
-I'd like to set up a meeting next week to finalize the budget.,MeetingScheduling
-Please arrange a Zoom meeting for the whole team tomorrow.,MeetingScheduling
-How about we meet on Monday at 10 AM to review the report?,MeetingScheduling
-Schedule a call with the vendor sometime this week.,MeetingScheduling
-Can we block 30 minutes on your calendar for a strategy discussion?,MeetingScheduling
-Let's connect over a video call to plan the roadmap.,MeetingScheduling
-Please propose a few time slots for a project kickoff meeting.,MeetingScheduling
-The client demo is confirmed for Thursday at 3 PM. Please add it to the calendar.,CalenderEvent
-Mark your calendar for the quarterly review on May 15th at 11:00 AM.,CalenderEvent
-"I've booked a room for our training session on Tuesday, 2 PM.",CalenderEvent
-Please log the upcoming workshop scheduled for April 20th.,CalenderEvent
-We’re attending the security webinar on Friday. Add it to the team calendar.,CalenderEvent
-Don't forget the HR orientation event on Monday morning.,CalenderEvent
-The tech talk is happening on June 5th. Kindly add the event to our calendar.,CalenderEvent
-Our annual planning session is fixed for next Thursday at 9 AM.,CalenderEvent
-Add the new hire onboarding event scheduled for next Tuesday.,CalenderEvent
-Reminder: The performance review meeting is set for April 30th at 10 AM.,CalenderEvent
-Could you please send me the updated invoice for this month?,AutomatedReply
-Let me know once you’ve received the documents.,AutomatedReply
-Thanks for your help on this!,AutomatedReply
-Please confirm if the meeting invite was sent.,AutomatedReply
-Can you share the details again?,AutomatedReply
-I have submitted the form as requested.,AutomatedReply
-Kindly acknowledge receipt of the package.,AutomatedReply
-Following up on my previous email regarding access to the portal.,AutomatedReply
-Let me know if there's anything else you need from me.,AutomatedReply
-Thank you for the update.,AutomatedReply
-Hope you’re doing well! Just wanted to check in.,Others
-Here’s the monthly newsletter from our team.,Others
-We are excited to announce our new product launch!,Others
-This is a system-generated message. No reply needed.,Others
-Friendly reminder: the office will be closed on Friday.,Others
-Please find attached the latest version of the handbook.,Others
-Congratulations on completing your first year with us!,Others
-Here are the notes from today’s internal discussion.,Others
-Thank you all for your hard work this quarter.,Others
-We've updated our terms of service.,Others
+Could you please summarize this email thread for me?,SummaryRequest
+I need a quick summary of the attached document.,SummaryRequest
+Please give me a short summary of the meeting notes.,SummaryRequest
+Can you summarize what was discussed in the last call?,SummaryRequest
+Provide a summary of the report attached.,SummaryRequest
+"I don’t have time to read this, can you just summarize it?",SummaryRequest
+Summarize the key points from this article.,SummaryRequest
+Can I get a summary of yesterday’s presentation?,SummaryRequest
+Summarize this PDF into bullet points.,SummaryRequest
+Please extract and summarize the main ideas from this email.,SummaryRequest
+Give me a one-liner summary of this message.,SummaryRequest
+What are the takeaways from this thread?,SummaryRequest
+Can you give a TL;DR of the email chain?,SummaryRequest
+"I just received a long email, can you break it down?",SummaryRequest
+"Quick summary of this Slack conversation, please.",SummaryRequest
+What's the gist of this report?,SummaryRequest
+Boil down this document into a few lines.,SummaryRequest
+Need a summary of this discussion.,SummaryRequest
+Give me a high-level overview of this.,SummaryRequest
+Please condense the content of this email.,SummaryRequest
+Could you draft a short summary of this message?,SummaryRequest
+Create a brief summary from this article.,SummaryRequest
+Summarize the conversation we had over email.,SummaryRequest
+I need the main highlights from this report.,SummaryRequest
+What are the key points from this communication?,SummaryRequest
+Can you reduce this to a short version?,SummaryRequest
+Provide a summarized version of this long email.,SummaryRequest
+Help me understand this in a few bullet points.,SummaryRequest
+Give me a short breakdown of this information.,SummaryRequest
+Please highlight the most important parts of this.,SummaryRequest
+I want a summarized briefing of this note.,SummaryRequest
+Give a concise recap of this conversation.,SummaryRequest
+"I don’t need the details, just the summary please.",SummaryRequest
+Can you help by giving a short version of this email?,SummaryRequest
+Extract key insights from this attachment.,SummaryRequest
+Break down this document for me.,SummaryRequest
+Give me the core message from this thread.,SummaryRequest
+Summarize the following forwarded message.,SummaryRequest
+I'd like a quick digest of this content.,SummaryRequest
+Make a summary of this newsletter.,SummaryRequest
+Can you provide a short recap of this event?,SummaryRequest
+Help me get the crux of this lengthy email.,SummaryRequest
+"Bullet point summary of this article, please.",SummaryRequest
+Write a summary paragraph for this.,SummaryRequest
+Can you summarize the feedback from this email chain?,SummaryRequest
+I need a quick look at the contents here.,SummaryRequest
+What are the essential parts of this message?,SummaryRequest
+Give me a TL;DR of this attachment.,SummaryRequest
+Send me a summarized version of this memo.,SummaryRequest
+Review and summarize this long communication.,SummaryRequest
+Could you quickly summarize the key points from this message?,SummaryRequest
+"I don’t have time to read the full email, can you give me a summary?",SummaryRequest
+Summarize the content of this email for me.,SummaryRequest
+Give me a TL;DR of this message.,SummaryRequest
+What’s the main idea of this email?,SummaryRequest
+Can you condense this email into a few lines?,SummaryRequest
+I just want a brief of what this email says.,SummaryRequest
+Highlight only the important parts of this mail.,SummaryRequest
+Provide a short summary of the message below.,SummaryRequest
+Summarize the email in two sentences.,SummaryRequest
+I need a quick overview of this conversation.,SummaryRequest
+Extract the main points from this email.,SummaryRequest
+What is this person trying to say in short?,SummaryRequest
+Give me the gist of this email.,SummaryRequest
+Can you tell me the takeaway from this email?,SummaryRequest
+Help me understand this email faster – summarize it.,SummaryRequest
+Generate a summary of this email’s contents.,SummaryRequest
+Provide a brief explanation of what this email is about.,SummaryRequest
+Just tell me what this email is about.,SummaryRequest
+What's the summary of this email chain?,SummaryRequest
+Can I get a summary of the email thread?,SummaryRequest
+Give me the main highlights of this message.,SummaryRequest
+Provide me with a concise version of this email.,SummaryRequest
+Extract the core message from this email.,SummaryRequest
+Summarize this long message into a short paragraph.,SummaryRequest
+Could you summarize this for a meeting update?,SummaryRequest
+I need a summarized version to forward to my team.,SummaryRequest
+This email is too long; what’s the short version?,SummaryRequest
+Quick summary please — what’s this about?,SummaryRequest
+Boil down this email to its essentials.,SummaryRequest
+What’s the most important point here?,SummaryRequest
+Just a summary of the action items would be great.,SummaryRequest
+Turn this email into a bullet-point summary.,SummaryRequest
+Can you paraphrase this into a short brief?,SummaryRequest
+Draft a quick summary I can send to my manager.,SummaryRequest
+Make this email easier to understand.,SummaryRequest
+Help me summarize this for a report.,SummaryRequest
+I need a summary of the attached email.,SummaryRequest
+Rephrase this email into a short recap.,SummaryRequest
+What’s the email saying in simple terms?,SummaryRequest
+Please write a one-line summary of this.,SummaryRequest
+Extract the subject and summarize the body.,SummaryRequest
+"Too much text, summarize it please.",SummaryRequest
+Make this email more digestible — summary only.,SummaryRequest
+Skip the fluff — what’s the email about?,SummaryRequest
+"Can I have a short, sharp summary?",SummaryRequest
+Condense this into 3 bullet points.,SummaryRequest
+"I’m too busy to read it, summarize?",SummaryRequest
+Give me just the core message.,SummaryRequest
+Quickly tell me what this email is trying to say.,SummaryRequest
+What is the crux of this email?,SummaryRequest
+Can you tell me more about the pricing?,InfoRequest
+I need details on the onboarding process.,InfoRequest
+Could you share the deadline for submission?,InfoRequest
+What are the prerequisites for this course?,InfoRequest
+Please provide information about the company’s benefits.,InfoRequest
+When does the event start?,InfoRequest
+I’d like to know more about your services.,InfoRequest
+Can you send me the documentation?,InfoRequest
+What's included in the package?,InfoRequest
+Do you have any case studies I can read?,InfoRequest
+Who should I contact for support?,InfoRequest
+Can I get the specifications for the new product?,InfoRequest
+Please tell me more about the refund policy.,InfoRequest
+What is the expected delivery time?,InfoRequest
+Can you clarify the payment terms?,InfoRequest
+Where can I find the project files?,InfoRequest
+I need the full itinerary for the trip.,InfoRequest
+How does the subscription model work?,InfoRequest
+What’s the pricing breakdown?,InfoRequest
+Can you give more insight into your approach?,InfoRequest
+Could you explain the next steps?,InfoRequest
+I’m looking for the schedule of sessions.,InfoRequest
+Who’s the point of contact for this project?,InfoRequest
+What are the limitations of this tool?,InfoRequest
+Please let me know the requirements.,InfoRequest
+How do I access the dashboard?,InfoRequest
+What’s the process to request a demo?,InfoRequest
+Could you send me the slide deck?,InfoRequest
+Can I get the timeline for this initiative?,InfoRequest
+What’s the expected output from our end?,InfoRequest
+I’d like to request further details.,InfoRequest
+Can I receive the login credentials?,InfoRequest
+Where is the training material stored?,InfoRequest
+What format should the report be in?,InfoRequest
+Can you describe the role responsibilities?,InfoRequest
+When will the next update be available?,InfoRequest
+Please send over the list of deliverables.,InfoRequest
+What’s the average response time for support?,InfoRequest
+How do I enroll in the program?,InfoRequest
+Can you confirm the address for the event?,InfoRequest
+I need help understanding the usage metrics.,InfoRequest
+Please explain the account setup process.,InfoRequest
+Can you give a breakdown of your fees?,InfoRequest
+What documents do I need to bring?,InfoRequest
+Where can I submit my application?,InfoRequest
+Do you have a sample report?,InfoRequest
+Can I get access to the beta version?,InfoRequest
+Please confirm if this is the right procedure.,InfoRequest
+What’s the difference between the plans?,InfoRequest
+How should we prepare for the kickoff meeting?,InfoRequest
+Can you provide more details about the event mentioned?,InfoRequest
+I need additional information regarding the policy update.,InfoRequest
+What does this term in the contract mean?,InfoRequest
+Could you share more about the requirements listed?,InfoRequest
+Please send me the documentation for this process.,InfoRequest
+I'm looking for details about the training session.,InfoRequest
+Can I get the specs for the new product?,InfoRequest
+Where can I find more information about this topic?,InfoRequest
+Who should I contact for further clarification?,InfoRequest
+Can you tell me when this feature will be available?,InfoRequest
+Please share the official guidelines.,InfoRequest
+Could you explain how this workflow operates?,InfoRequest
+I’d like to understand the next steps.,InfoRequest
+Can you break this down for me?,InfoRequest
+What does the budget include?,InfoRequest
+I need to know more about your services.,InfoRequest
+Where can I read about the project scope?,InfoRequest
+Kindly send me the pricing breakdown.,InfoRequest
+Can I have a list of deliverables?,InfoRequest
+Could you clarify what’s required on our end?,InfoRequest
+Do we have any documentation on this tool?,InfoRequest
+Please explain what this abbreviation stands for.,InfoRequest
+What’s the expected timeline for this task?,InfoRequest
+How does this new policy impact us?,InfoRequest
+Can I get more context on the attached report?,InfoRequest
+I need further insights into this issue.,InfoRequest
+Can you elaborate on the changes made?,InfoRequest
+What resources do I need to get started?,InfoRequest
+Could you walk me through the process?,InfoRequest
+Are there any FAQs I can refer to?,InfoRequest
+Where is the link to the signup page?,InfoRequest
+Please provide the checklist.,InfoRequest
+Can I access the previous reports?,InfoRequest
+What’s the logic behind this update?,InfoRequest
+Could you send over the latest figures?,InfoRequest
+What are the expected deliverables from our side?,InfoRequest
+How will this affect our department?,InfoRequest
+Is there a file attached with more info?,InfoRequest
+Please explain the reasoning for this change.,InfoRequest
+Are there any examples you can share?,InfoRequest
+What does this alert signify?,InfoRequest
+Can someone clarify the email I received earlier?,InfoRequest
+Do we have a guide on this?,InfoRequest
+What’s included in the new onboarding process?,InfoRequest
+Can I request the full dataset?,InfoRequest
+Kindly forward the webinar details.,InfoRequest
+Could you provide the slide deck?,InfoRequest
+I need clarification on the KPIs mentioned.,InfoRequest
+Is there any documentation on this feature?,InfoRequest
+What are the prerequisites for this course?,InfoRequest
+Find recent articles about AI in healthcare.,WebSearch
+Search for the latest Python tutorials.,WebSearch
+Can you look up the weather forecast for tomorrow?,WebSearch
+Find me news about the Apple product launch.,WebSearch
+Search for top restaurants near me.,WebSearch
+Look up the definition of 'neural networks'.,WebSearch
+Find reviews for the new Tesla model.,WebSearch
+Search for remote internships in data science.,WebSearch
+Look up recent studies on climate change.,WebSearch
+Search for job openings at Google.,WebSearch
+Find trending research in quantum computing.,WebSearch
+Search for the best budget laptops under 50000.,WebSearch
+Find tips to improve email productivity.,WebSearch
+Search how to integrate Slack with Google Calendar.,WebSearch
+Look up tutorials on FastAPI.,WebSearch
+Search for upcoming tech conferences in India.,WebSearch
+Find the latest stock price of Microsoft.,WebSearch
+Search for healthy meal prep recipes.,WebSearch
+Look up TensorFlow vs PyTorch comparison.,WebSearch
+Search how to create a portfolio website.,WebSearch
+Find a beginner guide to machine learning.,WebSearch
+Search for freelance platforms for developers.,WebSearch
+Look up symptoms of vitamin D deficiency.,WebSearch
+Search best books to learn deep learning.,WebSearch
+Find trending topics on Twitter.,WebSearch
+Look up cheapest flights to Delhi this weekend.,WebSearch
+Search for top-rated productivity apps.,WebSearch
+Find online courses on MLOps.,WebSearch
+Search for YouTube videos about ResNet architecture.,WebSearch
+Look up historical data on Bitcoin.,WebSearch
+Find the schedule for the Indian Premier League.,WebSearch
+Search for the latest Android update release.,WebSearch
+Look up best practices for writing research papers.,WebSearch
+Find open-source datasets for NLP.,WebSearch
+Search for startups working in generative AI.,WebSearch
+Look up public holidays in 2025.,WebSearch
+Search for benefits of meditation.,WebSearch
+Find study material for GATE CSE.,WebSearch
+Search how to convert a TensorFlow model to ONNX.,WebSearch
+Find resume tips for freshers.,WebSearch
+Search for cafes with Wi-Fi near my location.,WebSearch
+Look up the movie reviews for 'Oppenheimer'.,WebSearch
+Find trending Kaggle competitions.,WebSearch
+Search for scholarships for Indian students abroad.,WebSearch
+Look up email etiquette tips for professionals.,WebSearch
+Search for guides on using GitHub Actions.,WebSearch
+Find discounts on online learning platforms.,WebSearch
+Search for volunteer opportunities in Delhi.,WebSearch
+Look up how to optimize BERT models.,WebSearch
+Find recent news about space exploration.,WebSearch
+Can you look this up online for me?,WebSearch
+Find recent news about the Mars mission.,WebSearch
+Search the web for the latest AI trends.,WebSearch
+Get me articles about climate change effects.,WebSearch
+Look up the symptoms of vitamin D deficiency.,WebSearch
+Find tutorials on building a REST API.,WebSearch
+Can you check what time the movie starts?,WebSearch
+Search for nearby Italian restaurants.,WebSearch
+Get the weather forecast for tomorrow in Delhi.,WebSearch
+Look up the best laptops under 50k.,WebSearch
+Search for scholarship opportunities for CS students.,WebSearch
+Find a good blog on productivity tips.,WebSearch
+Look into current stock prices of Tesla.,WebSearch
+Search for books similar to 'Atomic Habits'.,WebSearch
+Find research papers on neural networks.,WebSearch
+Search for an alternative to Google Docs.,WebSearch
+Can you get the latest cricket match score?,WebSearch
+Look up travel restrictions for Canada.,WebSearch
+Search for universities offering ML courses.,WebSearch
+Find info on how to file taxes online.,WebSearch
+Search for recipes using only eggs and cheese.,WebSearch
+Get an online Python compiler.,WebSearch
+Look up how to clean laptop fans safely.,WebSearch
+Find a comparison between GPT-4 and Claude.,WebSearch
+Can you search for freelance writing gigs?,WebSearch
+Find the latest tech jobs in Bangalore.,WebSearch
+Search for recent advancements in robotics.,WebSearch
+Get a list of the top 10 sci-fi movies.,WebSearch
+Find details about the budget 2025.,WebSearch
+Search for vegan protein powder reviews.,WebSearch
+Look for open-source project ideas.,WebSearch
+Search for famous quotes by Einstein.,WebSearch
+Find a tool to convert PDF to Word.,WebSearch
+Can you look up YouTube channel analytics tools?,WebSearch
+Search how to improve sleep quality.,WebSearch
+Look for current COVID-19 guidelines.,WebSearch
+Search how to apply for a driving license online.,WebSearch
+Find popular tourist attractions in Manali.,WebSearch
+Search for methods to boost concentration.,WebSearch
+Look up GitHub trending repos today.,WebSearch
+Find online certification courses in cloud computing.,WebSearch
+Search for easy dessert recipes.,WebSearch
+Can you check what’s trending on Twitter?,WebSearch
+Look up latest breakthroughs in cancer research.,WebSearch
+Search how to write a cover letter for freshers.,WebSearch
+Get me the best mobile phone deals today.,WebSearch
+Look up upcoming hackathons this month.,WebSearch
+Search for productivity extensions for Chrome.,WebSearch
+Find examples of professional portfolio websites.,WebSearch
+Can you send this email to our Slack channel?,SlackForward
+Please forward this message to the #general channel on Slack.,SlackForward
+Share this email with the product team on Slack.,SlackForward
+Put this on Slack so everyone can see.,SlackForward
+Send this conversation to Slack immediately.,SlackForward
+Push this email into our marketing Slack group.,SlackForward
+Please share this with the Slack engineering group.,SlackForward
+Can you notify the team on Slack with this email?,SlackForward
+Forward the contents of this email to Slack.,SlackForward
+Copy this over to Slack for reference.,SlackForward
+Send this message to our project Slack workspace.,SlackForward
+Post this email on the Slack updates channel.,SlackForward
+Push this to the Slack thread we discussed yesterday.,SlackForward
+Drop this into Slack for quick visibility.,SlackForward
+Can you put this message in our Slack channel?,SlackForward
+Send this over Slack so the design team sees it.,SlackForward
+Please share this email in Slack.,SlackForward
+Post this email to our shared Slack space.,SlackForward
+Put this thread in the Slack team chat.,SlackForward
+Share this with #announcements in Slack.,SlackForward
+Push this into Slack right away.,SlackForward
+Can you copy this email to our Slack discussion?,SlackForward
+Forward this email to Slack for everyone to view.,SlackForward
+Put this on Slack so the rest of the team can react.,SlackForward
+Paste this email in Slack.,SlackForward
+Can you notify everyone by posting this to Slack?,SlackForward
+Send this message to Slack with a quick note.,SlackForward
+Add this email content to Slack please.,SlackForward
+Let’s put this message in the Slack thread.,SlackForward
+Drop this in Slack for team discussion.,SlackForward
+"Send this update to Slack, ASAP.",SlackForward
+Share this on Slack under the #urgent channel.,SlackForward
+Forward this to Slack and tag the leads.,SlackForward
+Upload this email to Slack.,SlackForward
+Slack this to the appropriate group.,SlackForward
+Push this to Slack and notify the dev team.,SlackForward
+Share this message in the team’s Slack workspace.,SlackForward
+Include this in the Slack daily updates channel.,SlackForward
+Send this on Slack where we track client feedback.,SlackForward
+Can you forward this to Slack and mention Sarah?,SlackForward
+Broadcast this over Slack.,SlackForward
+Post this thread to Slack and get feedback.,SlackForward
+Ping Slack with this message for quick replies.,SlackForward
+Publish this in Slack for internal visibility.,SlackForward
+Send this email straight to Slack.,SlackForward
+Add this to Slack for easy access.,SlackForward
+Please post this email into Slack for archiving.,SlackForward
+Transfer this message to our Slack logs.,SlackForward
+Let’s Slack this message to everyone.,SlackForward
+Please deliver this content to Slack.,SlackForward
+Please forward this message to the team on Slack.,SlackForward
+Send this update to the #general channel.,SlackForward
+Share these meeting notes on Slack.,SlackForward
+Push this reminder to the Slack group.,SlackForward
+Send this to the devs via Slack.,SlackForward
+Can you post this summary on Slack?,SlackForward
+Forward this to the marketing channel.,SlackForward
+Drop this message in the #random channel.,SlackForward
+Push this to Slack for the design team.,SlackForward
+Send this status update to the client group.,SlackForward
+Post this announcement on Slack.,SlackForward
+Send the weekly report on Slack.,SlackForward
+Can you notify the #ops team with this?,SlackForward
+Share this email content on Slack.,SlackForward
+Forward this deadline extension to the team.,SlackForward
+Send a Slack message about this bug.,SlackForward
+Push this feature update to Slack.,SlackForward
+Drop this in the standup channel.,SlackForward
+Please inform the QA team on Slack.,SlackForward
+Relay this information to #project-x.,SlackForward
+Post this event on the Slack calendar.,SlackForward
+Send this user feedback to the support team Slack.,SlackForward
+Notify everyone on Slack about the deployment.,SlackForward
+Ping the team in Slack with this alert.,SlackForward
+Send the revised document link to Slack.,SlackForward
+Forward this budget approval to finance Slack.,SlackForward
+Post this agenda in the planning channel.,SlackForward
+Let the interns know via Slack.,SlackForward
+Slack this announcement to all hands.,SlackForward
+Send this template through Slack.,SlackForward
+Forward this Zoom link to the meeting channel.,SlackForward
+Drop the schedule on Slack.,SlackForward
+Tell the team on Slack the deadline changed.,SlackForward
+Post this bug list to the tech channel.,SlackForward
+Send this to @john in Slack.,SlackForward
+Slack this to whoever's on shift now.,SlackForward
+Can you forward this proposal to Slack?,SlackForward
+Share the hiring update with #hr.,SlackForward
+Send the project summary to Slack now.,SlackForward
+Update Slack with this issue.,SlackForward
+Push this checklist to the onboarding group.,SlackForward
+Let everyone in Slack know we’re live.,SlackForward
+Post this policy update on Slack.,SlackForward
+Share this invoice in the finance channel.,SlackForward
+Update Slack with this lead’s info.,SlackForward
+Ping the design team on Slack with this idea.,SlackForward
+Share this GitHub link on Slack.,SlackForward
+Notify @managers about this situation in Slack.,SlackForward
+Send the report to Slack before 6PM.,SlackForward
+Please post this article to #learning.,SlackForward
+Can we set up a meeting to discuss the quarterly results?,SceduledEvent
+Please schedule a meeting with the product team next week.,SceduledEvent
+Let's arrange a call with the client tomorrow at 3 PM.,SceduledEvent
+Add our weekly sync-up to the calendar.,SceduledEvent
+Book a room for the Friday strategy meeting.,SceduledEvent
+I’d like to organize a session for the roadmap review.,SceduledEvent
+Please block some time on my calendar for the HR interview.,SceduledEvent
+Let’s fix a time to go over the proposal.,SceduledEvent
+Schedule a Zoom call for the design presentation.,SceduledEvent
+Mark your calendar for a team briefing on Monday.,SceduledEvent
+I want to set up a meeting with the stakeholders.,SceduledEvent
+Add a meeting on Thursday to discuss campaign performance.,SceduledEvent
+Could you please schedule our sprint planning session?,SceduledEvent
+Set up a catch-up meeting with R&D team next Tuesday.,SceduledEvent
+I want to arrange a demo session this Friday.,SceduledEvent
+Put the tech review in the calendar for 2 PM.,SceduledEvent
+Let's schedule a one-on-one this week.,SceduledEvent
+Reserve time for a retrospective on Wednesday.,SceduledEvent
+Please create a calendar event for the user feedback review.,SceduledEvent
+I need a meeting on Friday to go through the updated deck.,SceduledEvent
+Add a call with the marketing head to the calendar.,SceduledEvent
+Can you fix a meeting slot for our partnership talk?,SceduledEvent
+Schedule a recurring sync-up with the dev team.,SceduledEvent
+Set a calendar invite for the new hire orientation.,SceduledEvent
+Block 30 minutes for the financial review.,SceduledEvent
+Arrange a call with the legal team regarding the NDA.,SceduledEvent
+Let’s finalize a time for the roadmap discussion.,SceduledEvent
+Please schedule the monthly progress review.,SceduledEvent
+Add a calendar reminder for the upcoming product launch.,SceduledEvent
+Plan a session on Monday for the budget discussion.,SceduledEvent
+Fix a slot for our quarterly strategy review.,SceduledEvent
+Can you schedule our client onboarding meeting?,SceduledEvent
+Let's organize a team catch-up next Friday.,SceduledEvent
+Set up a session to talk about OKRs.,SceduledEvent
+Book a time with Alex to review the project timeline.,SceduledEvent
+Add our training workshop to the calendar.,SceduledEvent
+Create an event for the team lunch tomorrow.,SceduledEvent
+I want to have a quick sync with the QA team.,SceduledEvent
+Schedule a planning call with the vendors.,SceduledEvent
+Add the conference call to everyone's calendar.,SceduledEvent
+Block some time for the UI/UX feedback session.,SceduledEvent
+Let’s plan our team offsite meeting.,SceduledEvent
+Mark the review call for Thursday at 5 PM.,SceduledEvent
+Arrange a weekly review meeting with sales.,SceduledEvent
+Put our monthly standup in the calendar.,SceduledEvent
+Set up a time to discuss the bug backlog.,SceduledEvent
+Book an hour with design team for the prototype discussion.,SceduledEvent
+Add a follow-up meeting for the support case.,SceduledEvent
+Let's meet on Wednesday to align on priorities.,SceduledEvent
+Please arrange the board meeting for next month.,SceduledEvent
+Schedule the kickoff meeting for our new project.,SceduledEvent
+Create a calendar invite for the demo walkthrough.,SceduledEvent
+Put a discussion slot for investor feedback.,SceduledEvent
+Schedule a meeting with the design team for next Wednesday at 2 PM.,SceduledEvent
+Add a calendar event for the client call on Friday morning.,SceduledEvent
+Set up a Zoom call with the HR team on Monday at 11 AM.,SceduledEvent
+Book a meeting with the supplier regarding the new shipment.,SceduledEvent
+Remind me about the budget review session next Thursday.,SceduledEvent
+Create an event for the performance evaluation meeting.,SceduledEvent
+Block time on my calendar for the marketing sync-up.,SceduledEvent
+Plan a team stand-up for tomorrow morning.,SceduledEvent
+Add a reminder for the legal consultation on the 10th.,SceduledEvent
+Organize a catch-up with the interns on Friday.,SceduledEvent
+Fix a call with the CEO next week.,SceduledEvent
+Please put the team meeting on my schedule at 3 PM today.,SceduledEvent
+Can you book a room for our brainstorming session at 5?,SceduledEvent
+Set up a calendar entry for the code review with the developers.,SceduledEvent
+Schedule a follow-up meeting with the stakeholders.,SceduledEvent
+Add the product launch event to the calendar.,SceduledEvent
+Arrange a one-on-one meeting with my manager.,SceduledEvent
+Put the financial planning discussion on Friday's schedule.,SceduledEvent
+Set a reminder for tomorrow's townhall at 4 PM.,SceduledEvent
+Book a session to review the quarterly targets.,SceduledEvent
+Block my calendar for a feedback meeting with the client.,SceduledEvent
+Plan a catch-up call for project status updates.,SceduledEvent
+Add a strategic planning meeting on next Monday.,SceduledEvent
+Create an event for onboarding new employees.,SceduledEvent
+Schedule a check-in with the project lead every Tuesday.,SceduledEvent
+Organize a session to discuss the updated roadmap.,SceduledEvent
+Set a Google Meet event for the UX review.,SceduledEvent
+Arrange an interview with the data scientist candidate.,SceduledEvent
+Schedule a meeting to finalize the hiring process.,SceduledEvent
+Block time for a retrospective after the sprint ends.,SceduledEvent
+Add the weekly sync call with the vendors.,SceduledEvent
+Put the compliance audit meeting on my calendar.,SceduledEvent
+Plan the OKR alignment session next week.,SceduledEvent
+Set a call with the external consultant tomorrow.,SceduledEvent
+Schedule a discussion on the customer feedback report.,SceduledEvent
+Book a time for evaluating our Q2 goals.,SceduledEvent
+Create a recurring meeting for every Friday team check-in.,SceduledEvent
+Add a session for training the new joiners.,SceduledEvent
+Fix a meeting to go over the invoice issues.,SceduledEvent
+Schedule the collaboration session with the design and dev team.,SceduledEvent
+Plan a roadmap review with leadership.,SceduledEvent
+Put a calendar reminder for the merger announcement meeting.,SceduledEvent
+Add an event for the new software onboarding demo.,SceduledEvent
+Set up a planning meeting for the next sprint.,SceduledEvent
+Create a calendar entry for reviewing this quarter's analytics.,SceduledEvent
+Organize a workshop on effective communication skills.,SceduledEvent
+Book a meeting room for the client presentation.,SceduledEvent
+Add an event to discuss the website redesign plan.,SceduledEvent
+Schedule the quarterly all-hands meeting.,SceduledEvent
+Block a slot for a follow-up on the legal case.,SceduledEvent
+Plan a knowledge transfer session with outgoing staff.,SceduledEvent
+Thank you for reaching out. I’ll get back to you shortly.,AutomatedReply
+I’ve received your message and will reply soon.,AutomatedReply
+Appreciate your email. I’ll respond as soon as I can.,AutomatedReply
+Thanks for the update. I’ll look into it.,AutomatedReply
+Got it. I’ll get back to you with the details.,AutomatedReply
+I’m currently away from my desk but will respond soon.,AutomatedReply
+Thanks for letting me know. I’ll check and reply.,AutomatedReply
+I’ll review the document and share my thoughts shortly.,AutomatedReply
+"Noted, I’ll follow up on this.",AutomatedReply
+Thanks for your patience. I’ll respond soon.,AutomatedReply
+I’ve seen your email. Will reply after my meeting.,AutomatedReply
+I’m on it and will update you soon.,AutomatedReply
+Thanks for the heads-up. I’ll look into it today.,AutomatedReply
+Appreciate the reminder. I’ll handle it.,AutomatedReply
+I’ll get back to you once I review this.,AutomatedReply
+Noted. Will take care of it.,AutomatedReply
+Thanks. I’ll get back with a response shortly.,AutomatedReply
+Your email has been received. I’ll get back to you.,AutomatedReply
+Will respond with more info soon.,AutomatedReply
+I’ve noted your message. Will reply after reviewing.,AutomatedReply
+Thanks for reaching out. I’ll respond after checking.,AutomatedReply
+Understood. I’ll take a look and reply.,AutomatedReply
+Got your email. I’ll share my thoughts soon.,AutomatedReply
+"Thanks, I’ll provide feedback shortly.",AutomatedReply
+Received. I’ll follow up soon.,AutomatedReply
+I’ll reply after confirming the details.,AutomatedReply
+Appreciate the message. Will revert shortly.,AutomatedReply
+I’m reviewing this and will respond soon.,AutomatedReply
+I’ll revert once I check the calendar.,AutomatedReply
+"Noted, thanks. I’ll respond shortly.",AutomatedReply
+Got it. Let me look into it and reply.,AutomatedReply
+I’m working on it and will respond soon.,AutomatedReply
+I’ll be in touch shortly with my response.,AutomatedReply
+"Thanks, I’ll update you by EOD.",AutomatedReply
+Received and acknowledged. Will respond.,AutomatedReply
+I’ll share an update once it’s done.,AutomatedReply
+Will do. I’ll confirm in a bit.,AutomatedReply
+Let me get back to you on this.,AutomatedReply
+I’ll respond after discussing with the team.,AutomatedReply
+I’ll check with the manager and get back.,AutomatedReply
+Got your query. I’ll reply once I have the answer.,AutomatedReply
+I’ll respond after some clarification.,AutomatedReply
+"Thanks, I’ll circle back with details.",AutomatedReply
+Message received. Will follow up shortly.,AutomatedReply
+I’ve taken note. Expect my response soon.,AutomatedReply
+Thanks. Let me confirm and reply.,AutomatedReply
+Will revert to you after analyzing.,AutomatedReply
+"Thanks, I’ll get back after reviewing.",AutomatedReply
+I’m reviewing it and will respond ASAP.,AutomatedReply
+I’ve received the request. Will follow up soon.,AutomatedReply
+I’ll address this and reply soon.,AutomatedReply
+Thank you for your email. I will get back to you shortly.,AutomatedReply
+I appreciate your message. I’ll respond soon.,AutomatedReply
+Received your email. I will review it and reply shortly.,AutomatedReply
+Thanks for reaching out. I'll follow up soon.,AutomatedReply
+I’ve got your email and will respond as soon as I can.,AutomatedReply
+Thank you for the information. I’ll get back to you.,AutomatedReply
+Your message has been received. I’ll reply shortly.,AutomatedReply
+I appreciate your email. Expect a response soon.,AutomatedReply
+Thanks! I’ll take a look and reply soon.,AutomatedReply
+I’ll respond to your query shortly. Thank you.,AutomatedReply
+Thanks for the update. I’ll review it and reply.,AutomatedReply
+Got your message. I’ll check and get back to you.,AutomatedReply
+I’m currently reviewing your request. Will reply soon.,AutomatedReply
+Thanks for the details. I’ll respond after reviewing.,AutomatedReply
+Thanks! I’ll respond after going through the email.,AutomatedReply
+I’m currently busy but will reply shortly.,AutomatedReply
+Received your email. Will respond once I have more info.,AutomatedReply
+Thanks for contacting me. I’ll get back to you soon.,AutomatedReply
+I appreciate your patience. I’ll reply shortly.,AutomatedReply
+Got it! I’ll respond with more info soon.,AutomatedReply
+Thank you for your patience. I’ll reply soon.,AutomatedReply
+I will get back to you after checking with the team.,AutomatedReply
+Thanks for the heads up. Replying soon.,AutomatedReply
+Thanks. Let me look into it and I’ll reply.,AutomatedReply
+I’ve noted your message. I’ll respond soon.,AutomatedReply
+Thanks for the quick update. I’ll follow up shortly.,AutomatedReply
+I’ve seen your request. I’ll reply after reviewing it.,AutomatedReply
+Appreciate the info. I’ll get back to you soon.,AutomatedReply
+Thanks for the clarification. Replying soon.,AutomatedReply
+Understood. I’ll respond once I confirm a few things.,AutomatedReply
+Got your point. I’ll respond after verifying.,AutomatedReply
+Your message is being reviewed. I’ll reply shortly.,AutomatedReply
+Thanks. I’ll check and let you know soon.,AutomatedReply
+I’ll respond soon after going through the attachments.,AutomatedReply
+Thanks for reaching out. Please expect a reply soon.,AutomatedReply
+I’m on it. I’ll send you a reply shortly.,AutomatedReply
+Thank you for your patience. Working on a reply.,AutomatedReply
+Got your email. Crafting a response now.,AutomatedReply
+I will reply to this as soon as I finish my current task.,AutomatedReply
+Thanks. I’ll respond once I verify with the client.,AutomatedReply
+Your message has been acknowledged. Replying soon.,AutomatedReply
+I’m working on it. Will respond soon.,AutomatedReply
+I will get back to you after checking my schedule.,AutomatedReply
+Thanks. I’ll get back after discussing internally.,AutomatedReply
+I appreciate your follow-up. Replying soon.,AutomatedReply
+I’ll send a detailed response shortly. Thanks.,AutomatedReply
+I’m looking into this. Expect a reply soon.,AutomatedReply
+Reviewing your request. Will respond soon.,AutomatedReply
+I’ve read your email. I’ll reply when I’m free.,AutomatedReply
+Thanks. I’ll reply once I confirm the next steps.,AutomatedReply
+"I’m on the move right now, will reply soon.",AutomatedReply
+Hope you're doing well!,Others
+Just checking in to see how things are going.,Others
+Let me know if you need anything from my side.,Others
+Have a great weekend!,Others
+Please disregard my previous message.,Others
+Following up on our earlier chat.,Others
+This email is just to say hello!,Others
+Wishing you the best in your new role!,Others
+Thanks for the quick chat earlier.,Others
+Let's catch up sometime soon.,Others
+I'll be offline for the rest of the day.,Others
+Just wanted to share a quick update.,Others
+Sending you best wishes.,Others
+Let me know your thoughts when you can.,Others
+Looking forward to hearing from you.,Others
+"No action needed, just keeping you informed.",Others
+"Take your time, no rush.",Others
+Thanks again for everything!,Others
+I appreciate your continued support.,Others
+This is just an FYI email.,Others
+Feel free to ignore this if it's not relevant.,Others
+Sharing this in case it's useful.,Others
+Congratulations on your achievement!,Others
+Happy to connect anytime.,Others
+Hope everything is going great on your end.,Others
+Talk to you soon!,Others
+Let me know when you're free for a quick chat.,Others
+Just realized I made a typo in my last email.,Others
+Enjoy your vacation!,Others
+Thanks for looping me in.,Others
+Appreciate your attention on this.,Others
+Happy Friday!,Others
+Hope your week is going well.,Others
+Just wanted to say thank you.,Others
+Sending positive vibes your way.,Others
+Have a relaxing day ahead.,Others
+Thanks for being awesome!,Others
+Feel free to reach out anytime.,Others
+Hope this brightens your day.,Others
+Have a safe trip!,Others
+I'm here if you need anything.,Others
+Nice speaking with you earlier.,Others
+Let’s grab a coffee sometime.,Others
+Thanks for taking the time to meet.,Others
+Sending over a quick hello!,Others
+Looking forward to our continued collaboration.,Others
+Have a productive week ahead.,Others
+It was great seeing you at the event.,Others
+Stay safe and take care!,Others
+Cheers!,Others
+Just touching base.,Others
+Hope you're having a great day!,Others
+Just checking in to say hello.,Others
+This is a test email. Please ignore.,Others
+Here's a fun fact I thought you'd enjoy.,Others
+Let’s catch up sometime soon!,Others
+"I found this meme hilarious, sharing it with you.",Others
+Can you believe it's already April?,Others
+How was your weekend?,Others
+Sending birthday wishes your way!,Others
+"Just saying hi, no action needed.",Others
+Hope everything's going well on your side.,Others
+Long time no see—let's reconnect soon.,Others
+This is just a friendly reminder to smile today!,Others
+Remember that trip we talked about? Let’s plan it soon.,Others
+I saw this quote and thought of you.,Others
+Hope the weather is better on your side.,Others
+Just sharing a random thought from today.,Others
+Let me know if you’re free to chat sometime.,Others
+Take care and stay safe!,Others
+This email doesn’t require a reply.,Others
+Hope your work is going smoothly.,Others
+Just felt like dropping a quick note.,Others
+"Thinking of you, no need to respond.",Others
+Sending you good vibes for the week ahead.,Others
+You're doing great—keep it up!,Others
+"This made me smile, hope it does for you too.",Others
+Let’s hang out soon!,Others
+Just passing along good wishes.,Others
+"Nothing urgent, just checking in.",Others
+I hope this message finds you well.,Others
+Wishing you a productive week ahead.,Others
+Sending you a virtual high-five!,Others
+I hope you're taking time to relax.,Others
+This is unrelated to work—just for fun!,Others
+Hope you’re enjoying your day so far.,Others
+This is just me being random.,Others
+Don’t forget to take breaks!,Others
+Take a moment to breathe today.,Others
+"Sometimes, no reason is the best reason to say hi!",Others
+Hope you're drinking enough water today.,Others
+Let’s take a break and chat soon.,Others
+Stay awesome!,Others
+Remember to stay positive.,Others
+You're appreciated more than you know.,Others
+I’m grateful for our friendship.,Others
+Here’s something to brighten your day.,Others
+Let’s catch up over coffee soon.,Others
+I admire your work ethic.,Others
+Take it easy and enjoy your day.,Others
+Have a peaceful evening.,Others
