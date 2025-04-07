@@ -1,20 +1,25 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from calender_utils import create_calendar_event
 from meeting_parser import parse_meeting_details
 from datetime import datetime
 from slack_utils import send_slack_message
 from websearch_utils import perform_web_search
+from reply_generator import generate_reply, create_draft
+from email_integration.fetch_email import authenticate_gmail 
 
-
-def route_intent(intent:str, summary: str):
+def route_intent(intent:str, summary: str, to_email: str = None, subject: str = "Re: Your email"):
     print(f"Intent: {intent}")
     
     if intent == "SummaryRequest":
         print("Summary Requested : ")
-        # to return summary directly from the db
+        return summary
 
-    elif intent == "InfoRequest":
-        print("Information Request detected")
-        # to trigger information extraction
+    # elif intent == "InfoRequest":
+    #     print("Information Request detected")
+    #     # to trigger information extraction
 
     elif intent == "WebSearch":
         print("Performing web search...")
@@ -34,9 +39,19 @@ def route_intent(intent:str, summary: str):
             return f"Failed to create event: {str(e)}"
 
     elif intent == "AutomatedReply":
-        print("some response to be sent")
-        ## generate a draft
+        print("Generating automated reply...")
+        try:
+            reply = generate_reply(summary)
+            print("Draft reply:\n", reply)
 
+            if to_email:  
+                service = authenticate_gmail()
+                draft = create_draft(service, 'me', reply, to_email, subject)
+                return f"Reply drafted successfully with ID: {draft.get('id')}"
+            else:
+                return reply  
+        except Exception as e:
+            return f"Failed to generate automated reply: {str(e)}"
     else:
         print("Nothing needed to be done")
         #for others class

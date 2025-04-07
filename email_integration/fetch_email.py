@@ -17,10 +17,11 @@ CREDENTIALS_FILE = "authentication/credentials.json"
 TOKEN_FILE = "authentication/token.pickle"
 
 # Gmail API Scope (Read Emails)
-SCOPES = SCOPES = [
+SCOPES = [
     'https://www.googleapis.com/auth/gmail.readonly',
     'https://www.googleapis.com/auth/gmail.send',
-    'https://www.googleapis.com/auth/calendar'  
+    'https://www.googleapis.com/auth/calendar',
+    'https://www.googleapis.com/auth/gmail.compose'
 ]
 
 def authenticate_gmail():
