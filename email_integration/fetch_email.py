@@ -17,7 +17,11 @@ CREDENTIALS_FILE = "authentication/credentials.json"
 TOKEN_FILE = "authentication/token.pickle"
 
 # Gmail API Scope (Read Emails)
-SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
+SCOPES = SCOPES = [
+    'https://www.googleapis.com/auth/gmail.readonly',
+    'https://www.googleapis.com/auth/gmail.send',
+    'https://www.googleapis.com/auth/calendar'  
+]
 
 def authenticate_gmail():
     creds = None
@@ -86,4 +90,4 @@ def extract_email_body(msg_data):
 if __name__ == "__main__":
     create_database()
     service = authenticate_gmail()
-    fetch_and_store_emails(service, max_results=10)
+    fetch_and_store_emails(service, max_results=1)
