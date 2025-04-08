@@ -18,3 +18,5 @@ tf2onnx
 onnxruntime
 python-dotenv
 google-search-results
+fastapi
+uvicorn

@@ -73,6 +73,56 @@ def export_emails_to_csv(filename="emails.csv"):
     
     conn.close()
 
+
+def get_latest_cleaned_email():
+    """Fetch the latest cleaned email (by email_id) with recipient and subject."""
+    query = """
+        SELECT ce.cleaned_body, e.recipient, e.subject
+        FROM cleaned_emails ce
+        JOIN emails e ON ce.email_id = e.id
+        ORDER BY ce.id DESC
+        LIMIT 1
+    """
+
+    try:
+        with sqlite3.connect(DATABASE_PATH) as conn:
+            cursor = conn.cursor()
+            cursor.execute(query)
+            result = cursor.fetchone()
+
+        if result:
+            cleaned_body, recipient, subject = result
+            print("\n Fetched latest cleaned email successfully.")
+            return cleaned_body, recipient, subject
+        else:
+            print("\n No cleaned email found in the database.")
+            return None, None, None
+
+    except sqlite3.Error as e:
+        print(f"\n SQLite Error: {e}")
+        return None, None, None
+    
+    
+def fetch_cleaned_email_by_id(email_id: int):
+    conn = sqlite3.connect(DATABASE_PATH)
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT body, subject, recipient FROM emails WHERE id = ?", (email_id,))
+    result = cursor.fetchone()
+    conn.close()
+
+    if result:
+        body, subject, recipient = result
+
+        # Optional cleaning
+        cleaned_body = body.strip().replace("\n", " ")  # Basic cleaning
+
+        return cleaned_body, subject, recipient
+    else:
+        raise ValueError(f"No email found with ID: {email_id}")
+
+
+
 if __name__ == "__main__":
     # fetch_all_emails() 
     fetch_cleaned_emails()
