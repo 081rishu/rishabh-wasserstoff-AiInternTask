@@ -15,11 +15,14 @@ An intelligent email assistant that connects to your Gmail inbox, understands th
 
 
 ## Project Structure
-
+```bash
 wasserstoff
+    ├── api
+    │   └── routes.py
+    │
     ├── authentication
     │   ├── credentials.json
-    │   ├── token.pickle
+    │   └── token.pickle
     │
     ├── context_understanding
     │   ├── calendar_utils.py
@@ -59,7 +62,7 @@ wasserstoff
     ├── main.py
     ├── README.md
     └── requirements.txt
-
+```
 
 ## Getting Started
 
