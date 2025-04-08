@@ -139,19 +139,20 @@ What Happens on Running:
 
 ```mermaid
 flowchart TD
-    A[Gmail Inbox]:::input --> B[fetch_email.py\nAuthenticate + Fetch Emails (OAuth2)]
-    B --> C[data_cleaning.py\nClean + Structure Email Text]
-    C --> D[email_data.db\n(SQLite Database)]
-    D --> E[email_summarizer.py\nSummarize Email (Flan-T5)]
-    D --> F[intent_predictor.py\nPredict Intent (BERT)]
-    E --> G[intent_router.py\nDecide Action based on Intent]
+    A[Gmail Inbox]:::input --> B[fetch_email.py<br>Authenticate + Fetch Emails (OAuth2)]
+    B --> C[data_cleaning.py<br>Clean + Structure Email Text]
+    C --> D[email_data.db<br>(SQLite Database)]
+    D --> E[email_summarizer.py<br>Summarize Email (Flan-T5)]
+    D --> F[intent_predictor.py<br>Predict Intent (BERT)]
+    E --> G[intent_router.py<br>Decide Action based on Intent]
     F --> G
-    G --> H[calendar_utils.py\nGoogle Calendar Event]
-    G --> I[slack_utils.py\nSend to Slack Channel]
-    G --> J[websearch_utils.py\nSearch Web (SerpAPI)]
-    G --> K[reply_generator.py\nGenerate Reply Draft]
+    G --> H[calendar_utils.py<br>Google Calendar Event]
+    G --> I[slack_utils.py<br>Send to Slack Channel]
+    G --> J[websearch_utils.py<br>Search Web (SerpAPI)]
+    G --> K[reply_generator.py<br>Generate Reply Draft]
 
     classDef input fill:#dff,stroke:#00f;
+
 
 
 ## Intent_Prediction Model:
