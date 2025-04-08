@@ -139,19 +139,18 @@ What Happens on Running:
 
 ```mermaid
 flowchart TD
-    A["Gmail Inbox"]:::input --> B["fetch_email.py\nAuthenticate + Fetch Emails (OAuth2)"]
-    B --> C["data_cleaning.py\nClean + Structure Email Text"]
-    C --> D["email_data.db\n(SQLite Database)"]
-    D --> E["email_summarizer.py\nSummarize Email (Flan-T5)"]
-    D --> F["intent_predictor.py\nPredict Intent (BERT)"]
-    E --> G["intent_router.py\nDecide Action based on Intent"]
+    A[Gmail Inbox] --> B[fetch_email.py]
+    B --> C[data_cleaning.py]
+    C --> D[email_data.db]
+    D --> E[email_summarizer.py]
+    D --> F[intent_predictor.py]
+    E --> G[intent_router.py]
     F --> G
-    G --> H["calendar_utils.py\nGoogle Calendar Event"]
-    G --> I["slack_utils.py\nSend to Slack Channel"]
-    G --> J["websearch_utils.py\nSearch Web (SerpAPI)"]
-    G --> K["reply_generator.py\nGenerate Reply Draft"]
+    G --> H[calendar_utils.py]
+    G --> I[slack_utils.py]
+    G --> J[websearch_utils.py]
+    G --> K[reply_generator.py]
 
-    classDef input fill:#dff,stroke:#00f;
 
 
 
