@@ -69,15 +69,21 @@ wasserstoff
 Follow these steps to set up the project on your local machine:
 
 1. Clone the Repository:
-    - git clone https://github.com/081rishu/rishabh-wasserstoff-AiInternTask.git
-    - cd rishabh-wasserstoff-AiInternTask
+```bash
+    git clone https://github.com/081rishu/rishabh-wasserstoff-AiInternTask.git
+    cd rishabh-wasserstoff-AiInternTask
+```
 
 2. Create and Activate Virtual Environment (optional but recommended)
-    - python -m venv venv
-    - venv\Scripts\activate
+```bash
+    python -m venv venv
+    venv\Scripts\activate
+```
 
 3. Install Dependencies
+```bash
     - pip install -r requirements.txt
+```
 
 4. Add Gmail API Credentials
     - Go to the Google Cloud Console (https://console.cloud.google.com/)
@@ -92,9 +98,11 @@ Follow these steps to set up the project on your local machine:
 
 5. Setup Environment Variables
     Create a .env file in the root directory and add the following:
-        - SERPAPI_API_KEY=<your-serpapi-key>
-        - SLACK_BOT_TOKEN=<your-slack-bot-token>
-        - SLACK_CHANNEL_ID=<your-slack-channer-id>
+```bash
+        SERPAPI_API_KEY=<your-serpapi-key>
+        SLACK_BOT_TOKEN=<your-slack-bot-token>
+        SLACK_CHANNEL_ID=<your-slack-channer-id>
+```
 
 
 ## Usage
