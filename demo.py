@@ -50,7 +50,7 @@ def main():
     clean_and_store_emails()
 
     print("\n=== Step 3: Checking Cleaned Emails ===")
-    fetch_cleaned_emails()  # Debugging output
+    fetch_cleaned_emails() 
 
     text, to_email, subject = get_latest_cleaned_email()
 

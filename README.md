@@ -137,19 +137,7 @@ What Happens on Running:
 
 ### 🧠 Architecture Overview
 
-```mermaid
-flowchart TD
-    A[Gmail Inbox] --> B[fetch_email.py]
-    B --> C[data_cleaning.py]
-    C --> D[email_data.db]
-    D --> E[email_summarizer.py]
-    D --> F[intent_predictor.py]
-    E --> G[intent_router.py]
-    F --> G
-    G --> H[calendar_utils.py]
-    G --> I[slack_utils.py]
-    G --> J[websearch_utils.py]
-    G --> K[reply_generator.py]
+![Here is the flow chart of the project](assets/architecture.png)
 
 
 
